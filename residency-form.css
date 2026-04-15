@@ -1,0 +1,50 @@
+/* Center the form on the page */
+body {
+  background-color: #f4f4f4;
+}
+
+form, .df-form-wrapper, .dynaform {
+  max-width: 850px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+/* Clean typography */
+body, input, select, textarea {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+h2, h3, .section-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* Field inputs */
+input[type="text"], select {
+  border: 1px solid #aaa;
+  padding: 4px 6px;
+  border-radius: 2px;
+}
+
+/* Print / PDF styles */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  form, .df-form-wrapper, .dynaform {
+    box-shadow: none;
+    margin: 0;
+    padding: 0.5in;
+    max-width: 100%;
+  }
+
+  font-size: 11pt;
+  line-height: 1.6;
+}
