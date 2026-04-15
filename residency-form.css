@@ -1,50 +1,201 @@
-/* Center the form on the page */
+/* =============================================
+   EFSC Dynamic Forms - Global Stylesheet
+   Florida Residency Request Form
+   ============================================= */
+
+/* Page background */
 body {
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #222222;
+  margin: 0;
+  padding: 20px 0;
 }
 
-form, .df-form-wrapper, .dynaform {
-  max-width: 850px;
+/* Center the form like a paper document on screen */
+form,
+.df-form-wrapper,
+.dynaform,
+.form-container,
+[class*="form"] {
+  max-width: 860px;
   margin: 30px auto;
   background: #ffffff;
-  padding: 30px 40px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 40px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-/* Clean typography */
-body, input, select, textarea {
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
   font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-h2, h3, .section-header {
-  font-size: 16px;
   font-weight: bold;
-  margin-top: 20px;
+  color: #1a1a1a;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
-/* Field inputs */
-input[type="text"], select {
-  border: 1px solid #aaa;
-  padding: 4px 6px;
-  border-radius: 2px;
+h2 {
+  font-size: 20px;
+  text-align: center;
 }
 
-/* Print / PDF styles */
+h3 {
+  font-size: 15px;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 4px;
+}
+
+p, li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* ---- Form fields ---- */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  padding: 5px 7px;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #005a8e;
+  border-color: #005a8e;
+}
+
+/* ---- Labels ---- */
+label {
+  font-size: 13px;
+  font-weight: normal;
+  color: #222222;
+}
+
+/* ---- Required field asterisk ---- */
+.required,
+[class*="required"] {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* ---- Buttons ---- */
+input[type="button"],
+input[type="submit"],
+button {
+  background-color: #005a8e;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover {
+  background-color: #004070;
+}
+
+/* ---- Checkboxes ---- */
+input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* ---- Section dividers ---- */
+hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin: 20px 0;
+}
+
+/* ---- Tables (used for layout in Dynamic Forms) ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 8px;
+  vertical-align: top;
+  font-size: 13px;
+}
+
+/* ---- Logo/header image ---- */
+img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* =============================================
+   PRINT / PDF STYLES
+   ============================================= */
 @media print {
   body {
-    background: #fff;
+    background: #ffffff;
+    font-size: 11pt;
+    color: #000000;
+    margin: 0;
+    padding: 0;
   }
 
-  form, .df-form-wrapper, .dynaform {
+  form,
+  .df-form-wrapper,
+  .dynaform,
+  .form-container,
+  [class*="form"] {
     box-shadow: none;
+    border-radius: 0;
     margin: 0;
-    padding: 0.5in;
+    padding: 0.6in 0.75in;
     max-width: 100%;
   }
 
-  font-size: 11pt;
-  line-height: 1.6;
+  h2 {
+    font-size: 16pt;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 12pt;
+  }
+
+  p, li, td, label {
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    border: 1px solid #000000;
+    background: #ffffff;
+  }
+
+  input[type="button"],
+  input[type="submit"],
+  button {
+    display: none;
+  }
+
+  hr {
+    border-top: 1px solid #000000;
+  }
 }
