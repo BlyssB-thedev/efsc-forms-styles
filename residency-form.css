@@ -71,13 +71,6 @@ p, li {
   overflow-wrap: break-word;
 }
 
-/* ---- Tables ---- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
 td {
   padding: 6px 8px;
   vertical-align: middle;
