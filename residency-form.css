@@ -1,283 +1,50 @@
-/* =============================================
-   EFSC Dynamic Forms - Global Stylesheet
-   Florida Residency Request Form
-   ============================================= */
-
-/* Page background */
+/* Center the form on the page */
 body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #222222;
-  margin: 0;
-  padding: 20px 0;
+  background-color: #f4f4f4;
 }
 
-/* Center the form */
-form,
-.df-form-wrapper,
-.dynaform,
-.form-container {
-  max-width: 900px;
+form, .df-form-wrapper, .dynaform {
+  max-width: 850px;
   margin: 30px auto;
   background: #ffffff;
-  padding: 40px 50px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  padding: 30px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
-/* ---- Hide internal table/field name labels ---- */
-/* These are the gray label names like "Tier1_Table", 
-   "Claimant_Information_Table" etc. */
-.df-item-label,
-[class*="_Table"],
-[class*="_table"],
-label.item-label {
-  display: none;
-}
-
-/* ---- Typography ---- */
-h1, h2, h3, h4 {
+/* Clean typography */
+body, input, select, textarea {
   font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+h2, h3, .section-header {
+  font-size: 16px;
   font-weight: bold;
-  color: #1a1a1a;
-  margin-top: 24px;
+  margin-top: 20px;
   margin-bottom: 8px;
 }
 
-h2 {
-  font-size: 20px;
-  text-align: center;
-}
-
-h3 {
-  font-size: 15px;
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 4px;
-}
-
-p, li {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #333333;
-}
-
-/* ---- Prevent text overflow on wide content ---- */
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* ---- Tables ---- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-td {
-  padding: 6px 8px;
-  vertical-align: middle;
-  font-size: 13px;
-  word-wrap: break-word;
-}
-
-/* ---- Form fields ---- */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="date"],
-select,
-textarea {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  border: 1px solid #999999;
+/* Field inputs */
+input[type="text"], select {
+  border: 1px solid #aaa;
+  padding: 4px 6px;
   border-radius: 2px;
-  padding: 5px 7px;
-  background-color: #ffffff;
-  color: #111111;
-  max-width: 100%;
 }
 
-input[type="text"]:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid #005a8e;
-  border-color: #005a8e;
-}
-
-/* ---- File upload - no yellow tint ---- */
-input[type="file"] {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  font-size: 12px;
-}
-
-/* ---- Labels ---- */
-label {
-  font-size: 13px;
-  font-weight: normal;
-  color: #222222;
-}
-
-/* ---- Required asterisk ---- */
-.required,
-[class*="required"] {
-  color: #cc0000;
-  font-weight: bold;
-}
-
-/* ---- Buttons ---- */
-input[type="button"],
-input[type="submit"],
-button {
-  background-color: #005a8e;
-  color: #ffffff;
-  border: none;
-  padding: 8px 20px;
-  font-size: 13px;
-  font-family: Arial, sans-serif;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-input[type="button"]:hover,
-input[type="submit"]:hover,
-button:hover {
-  background-color: #004070;
-}
-
-/* ---- Checkboxes ---- */
-input[type="checkbox"] {
-  margin-right: 8px;
-  vertical-align: middle;
-  background-color: transparent;
-  border: none;
-  width: auto;
-  max-width: none;
-}
-
-/* ---- Dividers ---- */
-hr {
-  border: none;
-  border-top: 1px solid #dddddd;
-  margin: 20px 0;
-}
-
-/* ---- Logo ---- */
-img {
-  max-width: 200px;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* =============================================
-   PRINT / PDF STYLES
-   ============================================= */
+/* Print / PDF styles */
 @media print {
   body {
-    background: #ffffff;
-    font-size: 11pt;
-    color: #000000;
-    margin: 0;
-    padding: 0;
+    background: #fff;
   }
 
-  form,
-  .df-form-wrapper,
-  .dynaform,
-  .form-container {
+  form, .df-form-wrapper, .dynaform {
     box-shadow: none;
-    border-radius: 0;
     margin: 0;
-    padding: 0.5in 0.75in;
+    padding: 0.5in;
     max-width: 100%;
   }
 
-  h2 {
-    font-size: 16pt;
-    text-align: center;
-    margin-bottom: 10pt;
-  }
-
-  h3 {
-    font-size: 12pt;
-  }
-
-  p, li, td, label {
-    font-size: 10.5pt;
-    line-height: 1.5;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="date"],
-  select,
-  textarea {
-    border: 1px solid #000000;
-    background: #ffffff;
-    height: auto;
-    min-height: unset;
-    font-size: 10pt;
-  }
-
-  select {
-    height: auto;
-    min-height: unset;
-    width: auto;
-    max-width: 300px;
-  }
-
-  input[type="button"],
-  input[type="submit"],
-  button {
-    display: none;
-  }
-
-  hr {
-    border-top: 1px solid #000000;
-  }
-
-  table {
-    table-layout: fixed;
-    width: 100%;
-  }
-
-  td {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-   /* ---- Fix checkbox + label inline alignment ---- */
-input[type="checkbox"] {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 2px;
-  margin-right: 8px;
-  flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-}
-
-/* Force the whole cell to use flexbox so checkbox and text sit side by side */
-td label,
-td span,
-td p {
-  display: inline;
-  vertical-align: top;
-}
-
-/* Target the specific wrapper Dynamic Forms uses for checkboxes */
-.df-field-container,
-.field-container,
-[class*="field"] {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
+  font-size: 11pt;
+  line-height: 1.6;
 }
