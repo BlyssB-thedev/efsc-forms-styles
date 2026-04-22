@@ -168,3 +168,41 @@ img {
   display: block;
   margin-bottom: 10px;
 }
+/* ---- Session timeout modal fix ---- */
+.modal-dialog,
+.modal-content,
+[class*="modal"] {
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+.modal-body,
+[class*="modal-body"] {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  padding: 15px 20px !important;
+  overflow-y: auto !important;
+}
+
+.modal-dialog {
+  width: 400px !important;
+  max-width: 90vw !important;
+}
+/* ---- PDF: remove box shadow and border ---- */
+@media print {
+  form,
+  .df-form-wrapper,
+  .dynaform,
+  .form-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+  }
+}
