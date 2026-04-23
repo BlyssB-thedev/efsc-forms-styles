@@ -206,3 +206,33 @@ td {
   background: #ffffff;
   margin-bottom: 16px;
 }
+/* ---- Tier table - option 4 ---- */
+.tier-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tier-table td {
+  padding: 16px 20px;
+  vertical-align: top;
+  width: 50%;
+}
+
+.tier-table td:first-child {
+  border: 1px solid #dddddd;
+  border-right: 2px solid #2e7d4f;
+}
+
+.tier-table td:last-child {
+  border: 1px solid #dddddd;
+  border-left: 2px solid #005a8e;
+}
+
+/* ---- Tier table headers ---- */
+.tier-table td b,
+.tier-table td strong {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
