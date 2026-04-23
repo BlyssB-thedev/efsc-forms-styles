@@ -40,8 +40,9 @@ input[type="number"],
 input[type="date"],
 select,
 textarea {
-  width: 100% !important;
-  box-sizing: border-box !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
   font-size: 14px;
   border: 1px solid #999999;
@@ -185,21 +186,4 @@ body {
 /* ---- Vertical align all cells to middle ---- */
 td {
   vertical-align: middle !important;
-}
-
-/* ---- Stop asterisk from wrapping to new line ---- */
-td, label, span {
-  white-space: nowrap;
-}
-
-/* ---- But let inputs still stretch full width ---- */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="date"],
-select,
-textarea {
-  white-space: normal !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
 }
