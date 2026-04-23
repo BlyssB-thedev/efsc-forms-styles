@@ -133,7 +133,7 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 
-/* ---- Buttons ---- */
+/* ---- Navigation Buttons (Next/Previous) ---- */
 input[type="button"],
 input[type="submit"],
 button {
@@ -154,6 +154,43 @@ button:hover {
   background-color: #004070;
 }
 
+/* ---- Attach File Button - ALL instances ---- */
+button.btn-default[id*="attachFile"],
+button.btn-default[id*="attach"],
+.needfile button,
+.needfile .btn,
+div[class*="needfile"] button {
+  background-color: #2e7d4f !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 9px 22px !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+  cursor: pointer !important;
+}
+
+button.btn-default[id*="attachFile"]:hover,
+button.btn-default[id*="attach"]:hover,
+.needfile button:hover,
+.needfile .btn:hover {
+  background-color: #245f3d !important;
+}
+
+/* ---- Hide FileUpload internal labels ---- */
+label.inlinelabel {
+  display: none !important;
+}
+
+/* ---- File limit text ---- */
+span.filelimit {
+  font-size: 11px !important;
+  color: #666666 !important;
+  font-style: italic !important;
+}
+
 /* ---- Dividers ---- */
 hr {
   border: none;
@@ -170,11 +207,11 @@ img {
 }
 
 /* ---- Modals (Save Draft + Session Expiry) ---- */
-.modal-dialog,
+div.modal-dialog,
 #SaveAsDraftPopup .modal-dialog,
 #ExpireWarningPopup .modal-dialog {
-  width: 380px !important;
-  max-width: 90vw !important;
+  width: 360px !important;
+  max-width: 85vw !important;
 }
 
 .modal-content {
@@ -182,7 +219,9 @@ img {
   overflow-y: auto !important;
 }
 
-.modal-body,
+div.modal-body,
+div.modal-body p,
+div.modal-body span,
 #SaveAsDraftPopup .modal-body,
 #ExpireWarningPopup .modal-body {
   font-size: 13px !important;
@@ -191,18 +230,18 @@ img {
   overflow-y: auto !important;
 }
 
-.modal-title,
-.modal-title.fs18,
+div.modal-title,
+div.modal-header h4,
+.fs18,
 #SaveAsDraftPopup .modal-title,
 #ExpireWarningPopup .modal-title {
-  font-size: 15px !important;
+  font-size: 14px !important;
 }
 
 .modal-header,
 #SaveAsDraftPopup .modal-header,
 #ExpireWarningPopup .modal-header {
   padding: 10px 18px !important;
-  font-size: 14px !important;
 }
 
 .modal-footer,
@@ -228,22 +267,4 @@ img {
   body {
     background-color: #ffffff !important;
   }
-}
-/* ---- Force modal font size ---- */
-div.modal-body p,
-div.modal-body span,
-div.modal-body {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-}
-
-div.modal-title,
-div.modal-header h4,
-.fs18 {
-  font-size: 14px !important;
-}
-
-div.modal-dialog {
-  width: 360px !important;
-  max-width: 85vw !important;
 }
