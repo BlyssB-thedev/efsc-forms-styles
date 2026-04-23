@@ -229,3 +229,21 @@ img {
     background-color: #ffffff !important;
   }
 }
+/* ---- Force modal font size ---- */
+div.modal-body p,
+div.modal-body span,
+div.modal-body {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+div.modal-title,
+div.modal-header h4,
+.fs18 {
+  font-size: 14px !important;
+}
+
+div.modal-dialog {
+  width: 360px !important;
+  max-width: 85vw !important;
+}
