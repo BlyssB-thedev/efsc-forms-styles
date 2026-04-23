@@ -6,14 +6,13 @@
 /* Page background */
 body {
   background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  /* font-size: 15px; */
   color: #222222;
   margin: 0;
   padding: 20px 0;
   line-height: 1.7;
 }
-
 /* Center the form */
 form,
 .df-form-wrapper,
@@ -46,7 +45,7 @@ table {
 td {
   padding: 6px 10px 16px 10px;
   vertical-align: top;
-  font-size: 15px;
+  /* font-size: 15px; */
   word-wrap: break-word;
 }
 
@@ -57,11 +56,11 @@ input[type="number"],
 input[type="date"],
 select,
 textarea {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   border: 1px solid #d0d0d0;
   border-radius: 6px;
-  padding: 9px 12px;
+  padding: 4px 8px;
   background-color: #ffffff;
   color: #111111;
   width: 100%;
@@ -92,7 +91,7 @@ input[type="file"] {
 
 /* ---- Labels ---- */
 label {
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: normal;
   color: #222222;
 }
@@ -131,7 +130,7 @@ div[class*="needfile"] button {
   padding: 9px 22px !important;
   font-size: 13px !important;
   font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
+  font-family: "Times New Roman", Times, serif !important;
   letter-spacing: 0.5px !important;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
   cursor: pointer !important;
@@ -175,7 +174,7 @@ div.modal-body p,
 div.modal-body span,
 #SaveAsDraftPopup .modal-body,
 #ExpireWarningPopup .modal-body {
-  font-size: 13px !important;
+  /* font-size: 13px !important; */
   line-height: 1.5 !important;
   padding: 14px 18px !important;
   overflow-y: auto !important;
@@ -223,7 +222,7 @@ div.modal-header h4,
 .df-section-title,
 .section-header,
 h2.form-section {
-  font-size: 13px;
+  /* font-size: 13px;*/
   font-weight: bold;
   color: #555555;
   text-transform: uppercase;
