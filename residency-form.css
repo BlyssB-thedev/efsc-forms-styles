@@ -236,3 +236,35 @@ img {
 [class*="modal-footer"] {
   padding: 10px 20px !important;
 }
+/* ---- Save as Draft + Session Expiry Modals ---- */
+#SaveAsDraftPopup .modal-dialog,
+#ExpireWarningPopup .modal-dialog {
+  width: 380px !important;
+  max-width: 90vw !important;
+}
+
+#SaveAsDraftPopup .modal-body,
+#ExpireWarningPopup .modal-body {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  padding: 14px 18px !important;
+}
+
+#SaveAsDraftPopup .modal-title,
+#ExpireWarningPopup .modal-title {
+  font-size: 15px !important;
+}
+
+.modal-title.fs18 {
+  font-size: 15px !important;
+}
+
+#SaveAsDraftPopup .modal-header,
+#ExpireWarningPopup .modal-header {
+  padding: 10px 18px !important;
+}
+
+#SaveAsDraftPopup .modal-footer,
+#ExpireWarningPopup .modal-footer {
+  padding: 10px 18px !important;
+}
