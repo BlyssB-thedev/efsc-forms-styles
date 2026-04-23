@@ -92,15 +92,10 @@ input[type="file"] {
 
 /* ---- Labels ---- */
 label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #555555;
-  display: block;
-  margin-bottom: 2px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-size: 15px;
+  font-weight: normal;
+  color: #222222;
 }
-
 /* ---- Checkboxes ---- */
 input[type="checkbox"] {
   display: inline-block;
