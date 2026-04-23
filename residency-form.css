@@ -198,3 +198,11 @@ td {
   font-family: "Times New Roman", Times, serif;
   color: #222222;
 }
+/* ---- Form card - option 1 ---- */
+.form-card {
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 16px 20px;
+  background: #ffffff;
+  margin-bottom: 16px;
+}
