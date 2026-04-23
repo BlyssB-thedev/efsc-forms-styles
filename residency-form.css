@@ -206,3 +206,33 @@ img {
     background-color: #ffffff !important;
   }
 }
+/* ---- Draft saved modal + session timeout modal ---- */
+.modal-dialog,
+[class*="modal-dialog"] {
+  width: 420px !important;
+  max-width: 90vw !important;
+}
+
+.modal-content,
+[class*="modal-content"] {
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+.modal-body,
+[class*="modal-body"] {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  padding: 16px 20px !important;
+}
+
+.modal-header,
+[class*="modal-header"] {
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+}
+
+.modal-footer,
+[class*="modal-footer"] {
+  padding: 10px 20px !important;
+}
