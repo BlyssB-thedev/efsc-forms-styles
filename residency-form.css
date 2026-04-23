@@ -36,30 +36,6 @@ form,
   overflow-wrap: break-word;
 }
 
-/* ---- Typography ---- */
-h1, h2, h3, h4 {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  color: #1a1a1a;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-h2 {
-  font-size: 24px;
-  text-align: center;
-}
-
-h3 {
-  font-size: 18px;
-}
-
-p, li {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #333333;
-}
-
 /* ---- Tables ---- */
 table {
   width: 100%;
@@ -179,31 +155,11 @@ button.btn-default[id*="attach"]:hover,
   background-color: #245f3d !important;
 }
 
-/* ---- Hide FileUpload internal labels ---- */
-label.inlinelabel {
-  display: none !important;
-}
-
-/* ---- File limit text ---- */
-span.filelimit {
-  font-size: 11px !important;
-  color: #666666 !important;
-  font-style: italic !important;
-}
-
 /* ---- Dividers ---- */
 hr {
   border: none;
   border-top: 1px solid #dddddd;
   margin: 20px 0;
-}
-
-/* ---- Logo ---- */
-img {
-  max-width: 200px;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
 }
 
 /* ---- Modals (Save Draft + Session Expiry) ---- */
