@@ -246,3 +246,43 @@ td {
   font-size: 18px !important;
   font-weight: bold !important;
 }
+/* ---- Certification Page - Numbered Sections ---- */
+.cert-section {
+  display: flex !important;
+  gap: 14px !important;
+  align-items: flex-start !important;
+  padding: 10px 0 !important;
+  border-bottom: 0.5px solid #e0e0e0 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.cert-number {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: #2e7d4f !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.cert-title {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  font-style: italic !important;
+  color: #1a1a1a !important;
+  margin-bottom: 4px !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.cert-body {
+  font-size: 13px !important;
+  color: #333333 !important;
+  line-height: 1.6 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
