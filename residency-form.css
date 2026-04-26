@@ -236,3 +236,13 @@ td {
   font-size: 16px;
   margin-bottom: 12px;
 }
+.page-header-green {
+  background: #2e7d4f !important;
+  color: #ffffff !important;
+  padding: 14px 20px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  border: none !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
