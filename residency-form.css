@@ -294,3 +294,42 @@ p.renderPopUpSpan,
   border-radius: 50% !important;
   color: #ffffff !important;
 }
+/* ---- Save as Draft Modal - buttons ---- */
+#btnContinue,
+#SaveAsDraftPopup .btn.bClose,
+#SaveAsDraftPopup .btn.btn-default {
+  background-color: #2e7d4f !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 8px 24px !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  min-width: 100px !important;
+}
+
+#btnContinue:hover,
+#SaveAsDraftPopup .btn.btn-default:hover {
+  background-color: #245f3d !important;
+}
+
+/* ---- Widen the modal slightly ---- */
+#SaveAsDraftPopup {
+  width: 400px !important;
+  max-width: 90vw !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* ---- Button row spacing ---- */
+#SaveAsDraftPopup .textAlignC {
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: center !important;
+  padding: 12px 0 5px 0 !important;
+}
+
+#SaveAsDraftPopup .ml12 {
+  margin-left: 0 !important;
+}
