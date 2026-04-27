@@ -265,3 +265,12 @@ td {
     background-color: #ffffff !important;
   }
 }
+/* ---- Force modal body font size ---- */
+#SaveAsDraftPopup .modal-body,
+#SaveAsDraftPopup .modal-body p,
+#SaveAsDraftPopup .modal-body span,
+#SaveAsDraftPopup .modal-body div {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  font-family: Arial, sans-serif !important;
+}
