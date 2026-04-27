@@ -274,3 +274,23 @@ td {
   line-height: 1.5 !important;
   font-family: Arial, sans-serif !important;
 }
+/* ---- Save as Draft Modal - exact targeting ---- */
+p.renderPopUpSpan,
+#ALSaveAsDraftPopup {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  font-family: Arial, sans-serif !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+#SaveAsDraftPopup {
+  width: 360px !important;
+  max-width: 90vw !important;
+}
+
+#SaveAsDraftPopup .bPopUpClose {
+  background: #2e7d4f !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+}
