@@ -2,6 +2,7 @@
    EFSC Dynamic Forms - Global Stylesheet
    Florida Residency Request Form
    ============================================= */
+
 /* Page background */
 body {
   background-color: #f0f0f0;
@@ -12,6 +13,7 @@ body {
   padding: 20px 0;
   line-height: 1.7;
 }
+
 /* Center the form */
 form,
 .df-form-wrapper,
@@ -25,6 +27,7 @@ form,
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 /* ---- Prevent text overflow ---- */
 * {
   box-sizing: border-box;
@@ -50,14 +53,15 @@ textarea {
   padding: 4px 8px;
   background-color: #ffffff;
   color: #111111;
-  max-width: 100%;
 }
+
 input[type="text"]:focus,
 select:focus,
 textarea:focus {
   outline: 2px solid #005a8e;
   border-color: #005a8e;
 }
+
 /* ---- File upload ---- */
 input[type="file"] {
   background-color: transparent;
@@ -65,12 +69,14 @@ input[type="file"] {
   padding: 0;
   font-size: 13px;
 }
+
 /* ---- Labels ---- */
 label {
   font-size: 15px;
   font-weight: normal;
   color: #222222;
 }
+
 /* ---- Checkboxes ---- */
 input[type="checkbox"] {
   display: inline-block;
@@ -82,12 +88,14 @@ input[type="checkbox"] {
   flex-shrink: 0;
   max-width: none;
 }
+
 /* ---- Required asterisk ---- */
 .required,
 [class*="required"] {
   color: #cc0000;
   font-weight: bold;
 }
+
 /* ---- All Buttons (unified) ---- */
 input[type="button"],
 input[type="submit"],
@@ -122,72 +130,20 @@ button.btn-default[id*="attach"]:hover,
 div[class*="needfile"] button:hover {
   background-color: #245f3d !important;
 }
+
 /* ---- Dividers ---- */
 hr {
   border: none;
   border-top: 1px solid #dddddd;
   margin: 20px 0;
 }
-/* ---- Modals (Save Draft + Session Expiry) ---- */
-div.modal-dialog,
-#SaveAsDraftPopup .modal-dialog,
-#ExpireWarningPopup .modal-dialog {
-  width: 360px !important;
-  max-width: 85vw !important;
-}
-.modal-content {
-  max-height: 90vh !important;
-  overflow-y: auto !important;
-}
-div.modal-body,
-div.modal-body p,
-div.modal-body span,
-#SaveAsDraftPopup .modal-body,
-#ExpireWarningPopup .modal-body {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  padding: 14px 18px !important;
-  overflow-y: auto !important;
-}
-div.modal-title,
-div.modal-header h4,
-.fs18,
-#SaveAsDraftPopup .modal-title,
-#ExpireWarningPopup .modal-title {
-  font-size: 14px !important;
-}
-.modal-header,
-#SaveAsDraftPopup .modal-header,
-#ExpireWarningPopup .modal-header {
-  padding: 10px 18px !important;
-}
-.modal-footer,
-#SaveAsDraftPopup .modal-footer,
-#ExpireWarningPopup .modal-footer {
-  padding: 10px 18px !important;
-}
-/* ---- PDF: remove box shadow and border ---- */
-@media print {
-  form,
-  .df-form-wrapper,
-  .dynaform,
-  .form-container {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-  }
-body {
-    background-color: #ffffff !important;
-  }
-}
+
 /* ---- Vertical align all cells to middle ---- */
 td {
   vertical-align: middle !important;
 }
-/* ---- Section header - option 4 ---- */
+
+/* ---- Section header ---- */
 .section-header td {
   font-size: 16px;
   font-weight: bold;
@@ -198,7 +154,8 @@ td {
   font-family: "Times New Roman", Times, serif;
   color: #222222;
 }
-/* ---- Form card - option 1 ---- */
+
+/* ---- Form card ---- */
 .form-card {
   border: 1px solid #dddddd;
   border-radius: 6px;
@@ -206,7 +163,8 @@ td {
   background: #ffffff;
   margin-bottom: 16px;
 }
-/* ---- Tier table - option 4 ---- */
+
+/* ---- Tier table ---- */
 .tier-table {
   width: 100%;
   border-collapse: collapse;
@@ -228,7 +186,6 @@ td {
   border-left: 2px solid #005a8e;
 }
 
-/* ---- Tier table headers ---- */
 .tier-table td b,
 .tier-table td strong {
   display: block;
@@ -236,6 +193,8 @@ td {
   font-size: 16px;
   margin-bottom: 12px;
 }
+
+/* ---- Page header green banner ---- */
 .page-header-green {
   background: #2e7d4f !important;
   color: #ffffff !important;
@@ -246,6 +205,7 @@ td {
   font-size: 18px !important;
   font-weight: bold !important;
 }
+
 /* ---- Certification Page - Numbered Sections ---- */
 .cert-section {
   display: flex !important;
@@ -285,4 +245,71 @@ td {
   color: #333333 !important;
   line-height: 1.6 !important;
   font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* ---- Modals (Save Draft + Session Expiry) - FIXED ---- */
+div.modal-dialog,
+#SaveAsDraftPopup .modal-dialog,
+#ExpireWarningPopup .modal-dialog {
+  width: 480px !important;
+  max-width: 90vw !important;
+  min-height: unset !important;
+}
+
+div.modal-content,
+#SaveAsDraftPopup .modal-content,
+#ExpireWarningPopup .modal-content {
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  font-size: 12px !important;
+}
+
+div.modal-body,
+div.modal-body p,
+div.modal-body span,
+#SaveAsDraftPopup .modal-body,
+#ExpireWarningPopup .modal-body {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  padding: 12px 16px !important;
+  overflow-y: auto !important;
+}
+
+div.modal-title,
+div.modal-header h4,
+.fs18,
+#SaveAsDraftPopup .modal-title,
+#ExpireWarningPopup .modal-title {
+  font-size: 14px !important;
+}
+
+.modal-header,
+#SaveAsDraftPopup .modal-header,
+#ExpireWarningPopup .modal-header {
+  padding: 8px 16px !important;
+}
+
+.modal-footer,
+#SaveAsDraftPopup .modal-footer,
+#ExpireWarningPopup .modal-footer {
+  padding: 8px 16px !important;
+}
+
+/* ---- PDF: remove box shadow and border ---- */
+@media print {
+  form,
+  .df-form-wrapper,
+  .dynaform,
+  .form-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+  }
 }
