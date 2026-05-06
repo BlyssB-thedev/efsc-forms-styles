@@ -1,10 +1,10 @@
 /* =============================================
    EFSC Dynamic Forms - Global Stylesheet
    Health Science Transfer Credit Form
-   Option A — Clean Institutional
+   Option C — Minimal Staff
    Office of the Registrar | Staff Use Only
    ADA / WCAG 2.1 AA Compliant
-   Version: 2.0
+   Version: 1.0
    ============================================= */
 
 /* ---- Page background ---- */
@@ -18,7 +18,7 @@ body {
   line-height: 1.7 !important;
 }
 
-/* ---- Paper container ---- */
+/* ---- Paper container — no color header, clean card ---- */
 form,
 .df-form-wrapper,
 .dynaform,
@@ -27,23 +27,11 @@ form,
   margin: 0 auto !important;
   background: #ffffff !important;
   padding: 0 !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.10), 0 8px 24px rgba(0,0,0,0.07) !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.05) !important;
   border-radius: 2px !important;
-  border: 1px solid #c8c8c8 !important;
+  border: 0.5px solid #d8d8d8 !important;
   box-sizing: border-box !important;
   position: relative !important;
-}
-
-/* ---- Blue top accent bar ---- */
-form::before,
-.df-form-wrapper::before,
-.dynaform::before,
-.form-container::before {
-  content: '' !important;
-  display: block !important;
-  height: 6px !important;
-  background: #003087 !important;
-  border-radius: 2px 2px 0 0 !important;
 }
 
 /* ---- Reset ---- */
@@ -57,6 +45,114 @@ form::before,
 
 /* ---- All text elements ---- */
 p, span, div, td, th, li, a, label, input, select, textarea, button {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* ---- Logo / header row — minimal, no color fill ---- */
+.form-header,
+.df-form-header {
+  padding: 1.5rem 2rem 1.25rem !important;
+  border-bottom: 2px solid #003087 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  background: #ffffff !important;
+}
+
+/* ---- Form title ---- */
+h1,
+.form-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  text-align: center !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  margin: 1.25rem 2rem 0.25rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 0.5px solid #d8d8d8 !important;
+}
+
+/* ---- Form meta / ID line ---- */
+.form-id,
+.form-meta {
+  font-size: 11px !important;
+  color: #888888 !important;
+  text-align: center !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  margin-bottom: 1rem !important;
+}
+
+/* ---- Step progress tabs ---- */
+.step-bar,
+.form-steps {
+  display: flex !important;
+  gap: 0 !important;
+  margin: 0 2rem 1.5rem !important;
+  border-bottom: 2px solid #e0e0e0 !important;
+}
+
+.step-bar .step,
+.form-steps .step {
+  flex: 1 !important;
+  text-align: center !important;
+  padding: 6px 0 !important;
+  font-size: 11px !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  color: #888888 !important;
+  border-bottom: 2px solid transparent !important;
+  margin-bottom: -2px !important;
+}
+
+.step-bar .step.active,
+.form-steps .step.active {
+  border-bottom-color: #003087 !important;
+  color: #003087 !important;
+  font-weight: 600 !important;
+}
+
+.step-bar .step.done,
+.form-steps .step.done {
+  border-bottom-color: #2e7d4f !important;
+  color: #2e7d4f !important;
+}
+
+/* ---- Section blocks — card style ---- */
+.section-block,
+.form-section {
+  border: 0.5px solid #d8d8d8 !important;
+  border-radius: 4px !important;
+  padding: 1rem 1.25rem !important;
+  margin: 0 2rem 1.25rem !important;
+  background: #ffffff !important;
+}
+
+/* ---- Section block titles ---- */
+.section-block-title,
+.form-section-title {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  color: #666666 !important;
+  margin-bottom: 0.75rem !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* ---- Section headers (NextGen generated) ---- */
+.section-header td,
+h2, h3 {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  color: #666666 !important;
+  border-bottom: 0.5px solid #d8d8d8 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding-bottom: 5px !important;
+  margin: 1.75rem 0 1rem !important;
+  background: transparent !important;
   font-family: 'Times New Roman', Times, serif !important;
 }
 
@@ -75,9 +171,9 @@ textarea {
   font-size: 14px !important;
   height: 36px !important;
   padding: 0 10px !important;
-  border: 1.5px solid #aaaaaa !important;
-  border-radius: 3px !important;
-  background-color: #ffffff !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 2px !important;
+  background-color: #f9f9f9 !important;
   color: #1a1a1a !important;
   transition: border-color 0.15s, box-shadow 0.15s !important;
   appearance: none !important;
@@ -105,21 +201,22 @@ select:focus,
 textarea:focus {
   outline: none !important;
   border-color: #003087 !important;
-  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.18) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.15) !important;
 }
 
-/* ---- Disabled ---- */
+/* ---- Disabled fields ---- */
 input:disabled,
 select:disabled,
 textarea:disabled {
-  background: #f5f5f5 !important;
-  color: #888888 !important;
+  background: #f0f0f0 !important;
+  color: #999999 !important;
   cursor: not-allowed !important;
 }
 
 /* ---- Select arrow ---- */
 select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23444' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
   background-position: right 10px center !important;
   padding-right: 30px !important;
@@ -128,9 +225,9 @@ select {
 
 /* ---- File upload ---- */
 input[type="file"] {
-  background-color: transparent !important;
-  border: 1.5px dashed #aaaaaa !important;
-  border-radius: 3px !important;
+  background-color: #f9f9f9 !important;
+  border: 1px dashed #cccccc !important;
+  border-radius: 2px !important;
   padding: 8px 12px !important;
   font-size: 13px !important;
   width: 100% !important;
@@ -144,10 +241,12 @@ input[type="file"]:hover {
 
 /* ---- Labels ---- */
 label {
-  font-size: 14px !important;
-  font-weight: bold !important;
-  color: #1a1a1a !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  color: #555555 !important;
   line-height: 1.4 !important;
+  display: block !important;
+  margin-bottom: 3px !important;
   font-family: 'Times New Roman', Times, serif !important;
 }
 
@@ -164,7 +263,7 @@ input[type="radio"] {
   height: 18px !important;
   min-width: 18px !important;
   max-width: 18px !important;
-  border: 2px solid #888888 !important;
+  border: 2px solid #aaaaaa !important;
   border-radius: 50% !important;
   appearance: none !important;
   -webkit-appearance: none !important;
@@ -196,7 +295,7 @@ input[type="radio"]:checked::after {
 
 input[type="radio"]:focus {
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.22) !important;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.20) !important;
 }
 
 /* ---- Radio inline fix ---- */
@@ -204,6 +303,7 @@ input[type="radio"]:focus {
 [id*="radiobuttonlist"] label {
   display: inline !important;
   vertical-align: middle !important;
+  color: #1a1a1a !important;
 }
 
 [id*="RadioButtonList"] table,
@@ -237,7 +337,7 @@ input[type="checkbox"] {
   height: 18px !important;
   min-width: 18px !important;
   max-width: 18px !important;
-  border: 2px solid #888888 !important;
+  border: 2px solid #aaaaaa !important;
   border-radius: 2px !important;
   appearance: none !important;
   -webkit-appearance: none !important;
@@ -269,7 +369,7 @@ input[type="checkbox"]:checked::after {
 
 input[type="checkbox"]:focus {
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.22) !important;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.20) !important;
 }
 
 /* ---- Buttons ---- */
@@ -284,16 +384,17 @@ div[class*="needfile"] button {
   background-color: #003087 !important;
   color: #ffffff !important;
   border: none !important;
-  border-radius: 3px !important;
-  padding: 10px 24px !important;
-  font-size: 14px !important;
+  border-radius: 2px !important;
+  padding: 9px 22px !important;
+  font-size: 13px !important;
   font-weight: bold !important;
   font-family: 'Times New Roman', Times, serif !important;
   cursor: pointer !important;
   margin-top: 10px !important;
   transition: background-color 0.15s !important;
-  min-width: 140px !important;
+  min-width: 130px !important;
   box-shadow: none !important;
+  letter-spacing: 0.2px !important;
 }
 
 input[type="button"]:hover,
@@ -305,54 +406,42 @@ button:hover {
 input[type="button"]:focus,
 input[type="submit"]:focus,
 button:focus {
-  outline: 3px solid rgba(0, 48, 135, 0.30) !important;
+  outline: 3px solid rgba(0, 48, 135, 0.28) !important;
 }
 
 /* ---- Dividers ---- */
 hr {
   border: none !important;
-  border-top: 1px solid #e0e0e0 !important;
-  margin: 1.5rem 0 !important;
+  border-top: 0.5px solid #e0e0e0 !important;
+  margin: 1.25rem 0 !important;
 }
 
-/* ---- All table cells default ---- */
+/* ---- Table cells ---- */
 td, th {
   vertical-align: middle !important;
   font-family: 'Times New Roman', Times, serif !important;
 }
 
-/* ---- Section headers ---- */
-.section-header td,
-h2, h3 {
-  font-size: 11px !important;
+/* ---- Transfer credit table — minimal style, no dark header ---- */
+table thead tr th {
+  background-color: #f0f0f0 !important;
+  color: #333333 !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  color: #003087 !important;
-  border-bottom: 1px solid #003087 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  padding: 8px 10px !important;
+  text-align: left !important;
+  border-bottom: 1px solid #d8d8d8 !important;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
-  padding-bottom: 5px !important;
-  margin: 2rem 0 1.25rem !important;
-  background: transparent !important;
-  font-family: 'Times New Roman', Times, serif !important;
-}
-
-/* ---- Transfer credit data table — FORCE dark blue headers ---- */
-table thead tr th {
-  background-color: #003087 !important;
-  color: #ffffff !important;
-  font-size: 13px !important;
-  font-weight: bold !important;
-  font-family: 'Times New Roman', Times, serif !important;
-  padding: 10px 10px !important;
-  text-align: left !important;
-  border: 1px solid #002570 !important;
 }
 
 table tbody tr td {
-  border: 0.5px solid #dddddd !important;
+  border-bottom: 0.5px solid #eeeeee !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
   padding: 6px 10px !important;
   font-size: 13px !important;
   font-family: 'Times New Roman', Times, serif !important;
@@ -360,7 +449,7 @@ table tbody tr td {
 }
 
 table tbody tr:nth-child(even) td {
-  background-color: #f7f9ff !important;
+  background-color: #fafafa !important;
 }
 
 /* ---- Submission status ---- */
@@ -368,12 +457,12 @@ table tbody tr:nth-child(even) td {
 [id*="registrar"],
 [id*="CWC"],
 [id*="cwc"] {
-  background: #f7f9ff !important;
-  border: 1px solid #dde4f5 !important;
-  border-radius: 3px !important;
+  background: #f9f9f9 !important;
+  border: 0.5px solid #d8d8d8 !important;
+  border-radius: 2px !important;
   padding: 8px 12px !important;
   font-size: 13px !important;
-  color: #003087 !important;
+  color: #555555 !important;
   font-family: 'Times New Roman', Times, serif !important;
 }
 
@@ -391,13 +480,26 @@ table tbody tr:nth-child(even) td {
 .notice-strip,
 .form-notice {
   background: #fff8e1 !important;
-  border-left: 4px solid #f0a500 !important;
-  padding: 10px 14px !important;
-  font-size: 12.5px !important;
+  border-left: 3px solid #f0a500 !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
   color: #5a4200 !important;
-  border-radius: 0 3px 3px 0 !important;
+  border-radius: 0 2px 2px 0 !important;
   line-height: 1.5 !important;
-  margin: 1.25rem 2.5rem 0 !important;
+  margin: 1rem 2rem !important;
+}
+
+/* ---- Form footer / submit ---- */
+.form-footer,
+.submit-row {
+  padding: 1.25rem 2rem !important;
+  border-top: 0.5px solid #d8d8d8 !important;
+  background: #fafafa !important;
+  border-radius: 0 0 2px 2px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1rem !important;
 }
 
 /* ---- Save as Draft Modal ---- */
@@ -433,7 +535,7 @@ p.renderPopUpSpan,
   background-color: #003087 !important;
   color: #ffffff !important;
   border: none !important;
-  border-radius: 3px !important;
+  border-radius: 2px !important;
   padding: 8px 24px !important;
   font-size: 13px !important;
   font-weight: bold !important;
@@ -471,12 +573,6 @@ p.renderPopUpSpan,
     border: none !important;
     padding: 0 !important;
     margin: 0 !important;
-  }
-  form::before,
-  .df-form-wrapper::before,
-  .dynaform::before,
-  .form-container::before {
-    display: none !important;
   }
 }
 
