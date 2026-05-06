@@ -1,14 +1,4 @@
 /* =============================================
-   EFSC Dynamic Forms — Custom Classes
-   Use these classes directly in NextGen
-   form builder on specific elements.
-
-   USAGE:
-   - Add class "efsc-form-title" to your form title element
-   - Add class "efsc-transfer-table" to your credit table
-   ============================================= */
-
-/* =============================================
    EFSC Dynamic Forms - Global Stylesheet
    General Dynamic Form Template
    ADA / WCAG 2.1 AA Compliant
@@ -623,4 +613,27 @@ p.renderPopUpSpan,
   border-color: #003087 !important;
   background-color: #ffffff !important;
   box-shadow: 0 0 0 2px rgba(0, 48, 135, 0.15) !important;
+}
+
+/* ============================================
+   SECTION HEADER — .efsc-section-header
+   Style E: bold title, thick blue underline
+   ============================================ */
+.efsc-section-header {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  border-bottom: 2px solid #003087 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding-bottom: 5px !important;
+  padding-top: 0 !important;
+  margin: 1.75rem 0 1rem 0 !important;
+  background: transparent !important;
+  display: block !important;
+  width: 100% !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
 }
