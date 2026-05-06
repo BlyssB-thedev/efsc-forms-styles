@@ -7,6 +7,551 @@
    - Add class "efsc-form-title" to your form title element
    - Add class "efsc-transfer-table" to your credit table
    ============================================= */
+/* =============================================
+   EFSC Dynamic Forms - Global Stylesheet
+   General Dynamic Form Template
+   ADA / WCAG 2.1 AA Compliant
+   Version: 1.0
+   ============================================= */
+
+/* ---- Page background ---- */
+body {
+  background-color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 2.5rem 1rem 4rem;
+  line-height: 1.7;
+}
+
+/* ---- Paper container — centered white card ---- */
+form,
+.df-form-wrapper,
+.dynaform,
+.form-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 0;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.10),
+    0 8px 24px rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+  border: 1px solid #c8c8c8;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ---- Blue top accent bar ---- */
+form::before,
+.df-form-wrapper::before,
+.dynaform::before,
+.form-container::before {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #003087;
+  border-radius: 2px 2px 0 0;
+}
+
+/* ---- Reset box sizing ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ---- Inner form padding ---- */
+.df-form-wrapper > *,
+.dynaform > *,
+form > *,
+.form-container > * {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/* ---- Form fields ---- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1.5px solid #aaaaaa;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="date"] {
+  padding: 0 8px;
+}
+
+textarea {
+  height: auto;
+  min-height: 80px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+/* ---- Field focus — ADA visible ring ---- */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #003087;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.18);
+}
+
+/* ---- Error states ---- */
+input.error,
+select.error,
+textarea.error {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.15);
+}
+
+/* ---- Disabled fields ---- */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: #f5f5f5;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* ---- Select dropdown arrow ---- */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23444' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+/* ---- File upload ---- */
+input[type="file"] {
+  background-color: transparent;
+  border: 1.5px dashed #aaaaaa;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 13px;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+input[type="file"]:hover {
+  border-color: #003087;
+  background-color: #f0f4ff;
+}
+
+/* ---- Labels ---- */
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ---- Required asterisk ---- */
+.required,
+[class*="required"] {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* ---- Radio buttons ---- */
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid #888888;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  flex-shrink: 0;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px;
+  max-width: none;
+  display: inline-block !important;
+}
+
+/* ---- Force radio option rows to stay on one line ---- */
+table tr td label,
+span label,
+.radiobuttonlist label,
+[id*="RadioButtonList"] label,
+[id*="radiobuttonlist"] label {
+  display: inline !important;
+  vertical-align: middle !important;
+}
+
+[id*="RadioButtonList"] table,
+[id*="radiobuttonlist"] table {
+  display: block !important;
+}
+
+[id*="RadioButtonList"] table tr,
+[id*="radiobuttonlist"] table tr {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+[id*="RadioButtonList"] table tr td,
+[id*="radiobuttonlist"] table tr td {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
+}
+
+input[type="radio"]:checked {
+  background: #003087;
+  border-color: #003087;
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.22);
+}
+
+/* ---- Checkboxes ---- */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid #888888;
+  border-radius: 2px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  flex-shrink: 0;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px;
+  max-width: none;
+}
+
+input[type="checkbox"]:checked {
+  background: #003087;
+  border-color: #003087;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid #ffffff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.22);
+}
+
+/* ---- All buttons ---- */
+input[type="button"],
+input[type="submit"],
+button,
+button.btn-default[id*="attachFile"],
+button.btn-default[id*="attach"],
+.needfile button,
+.needfile .btn,
+div[class*="needfile"] button {
+  background-color: #003087 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 3px !important;
+  padding: 10px 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  letter-spacing: 0.3px !important;
+  cursor: pointer !important;
+  margin-top: 10px !important;
+  transition: background-color 0.15s !important;
+  min-width: 140px !important;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover,
+button.btn-default[id*="attachFile"]:hover,
+button.btn-default[id*="attach"]:hover,
+.needfile button:hover,
+.needfile .btn:hover,
+div[class*="needfile"] button:hover {
+  background-color: #00225e !important;
+}
+
+input[type="button"]:focus,
+input[type="submit"]:focus,
+button:focus {
+  outline: 3px solid rgba(0, 48, 135, 0.30) !important;
+}
+
+/* ---- Dividers ---- */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+/* ---- Table cell alignment ---- */
+td {
+  vertical-align: middle !important;
+}
+
+/* ---- Section headers ---- */
+.section-header td,
+h2,
+h3 {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #003087 !important;
+  border-bottom: 1px solid #003087 !important;
+  padding: 5px 0 5px 2.5rem !important;
+  margin: 2rem 0 1.25rem !important;
+  background: transparent !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  border-left: none !important;
+}
+
+/* ---- Notice / info strip ---- */
+.notice-strip,
+.form-notice {
+  background: #fff8e1;
+  border-left: 4px solid #f0a500;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: #5a4200;
+  border-radius: 0 3px 3px 0;
+  line-height: 1.5;
+  margin: 1rem 2.5rem;
+}
+
+/* ---- Legal / certification text block ---- */
+.legal-text,
+.cert-body {
+  font-size: 12px !important;
+  color: #555555 !important;
+  line-height: 1.6 !important;
+  padding: 10px 12px !important;
+  border: 1px solid #ddddee !important;
+  border-radius: 3px !important;
+  background: #ffffff !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* ---- Signature line area ---- */
+.signature-line {
+  border-top: 1.5px solid #333333;
+  margin-top: 2.5rem;
+  padding-top: 6px;
+  font-size: 12px;
+  color: #444444;
+  width: 60%;
+}
+
+/* ---- Footer / submit area ---- */
+.form-footer,
+.submit-row {
+  padding: 1.5rem 2.5rem;
+  border-top: 1.5px solid #003087;
+  background: #f7f9ff;
+  border-radius: 0 0 2px 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---- Field error messages ---- */
+.field-error,
+.error-message,
+[class*="error-msg"] {
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 3px;
+  display: block;
+}
+
+/* ---- Save as Draft Modal ---- */
+#SaveAsDraftPopup .modal-body,
+#SaveAsDraftPopup .modal-body p,
+#SaveAsDraftPopup .modal-body span,
+#SaveAsDraftPopup .modal-body div {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+p.renderPopUpSpan,
+#ALSaveAsDraftPopup {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+#SaveAsDraftPopup {
+  width: 400px !important;
+  max-width: 90vw !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+#SaveAsDraftPopup .bPopUpClose {
+  background: #003087 !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+}
+
+#btnContinue,
+#SaveAsDraftPopup .btn.bClose,
+#SaveAsDraftPopup .btn.btn-default {
+  background-color: #003087 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 3px !important;
+  padding: 8px 24px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  min-width: 100px !important;
+}
+
+#btnContinue:hover,
+#SaveAsDraftPopup .btn.btn-default:hover {
+  background-color: #00225e !important;
+}
+
+#SaveAsDraftPopup .textAlignC {
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: center !important;
+  padding: 12px 0 5px 0 !important;
+}
+
+#SaveAsDraftPopup .ml12 {
+  margin-left: 0 !important;
+}
+
+/* ---- Print / PDF ---- */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  form,
+  .df-form-wrapper,
+  .dynaform,
+  .form-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  form::before,
+  .df-form-wrapper::before,
+  .dynaform::before,
+  .form-container::before {
+    display: none !important;
+  }
+}
+
+/* ---- Responsive — tablet / mobile ---- */
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.5rem 2rem;
+  }
+
+  form,
+  .df-form-wrapper,
+  .dynaform,
+  .form-container {
+    padding: 0;
+  }
+
+  .section-header td,
+  h2, h3 {
+    padding-left: 1.25rem !important;
+  }
+
+  .notice-strip,
+  .form-notice {
+    margin: 1rem 1.25rem;
+  }
+
+  .form-footer,
+  .submit-row {
+    padding: 1.25rem;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  input[type="button"],
+  input[type="submit"],
+  button {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
 
 /* ============================================
    FORM TITLE — .efsc-form-title
