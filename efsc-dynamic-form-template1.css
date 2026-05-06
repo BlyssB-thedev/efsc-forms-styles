@@ -2,16 +2,17 @@
    EFSC Dynamic Forms — Custom Classes
    Use these classes directly in NextGen
    form builder on specific elements.
-   
+
    USAGE:
    - Add class "efsc-form-title" to your form title element
    - Add class "efsc-transfer-table" to your credit table
    ============================================= */
+
 /* =============================================
    EFSC Dynamic Forms - Global Stylesheet
    General Dynamic Form Template
    ADA / WCAG 2.1 AA Compliant
-   Version: 1.0
+   Version: 2.0
    ============================================= */
 
 /* ---- Page background ---- */
@@ -63,15 +64,6 @@ form::before,
   max-width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-
-/* ---- Inner form padding ---- */
-.df-form-wrapper > *,
-.dynaform > *,
-form > *,
-.form-container > * {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 /* ---- Form fields ---- */
@@ -323,12 +315,7 @@ div[class*="needfile"] button {
 
 input[type="button"]:hover,
 input[type="submit"]:hover,
-button:hover,
-button.btn-default[id*="attachFile"]:hover,
-button.btn-default[id*="attach"]:hover,
-.needfile button:hover,
-.needfile .btn:hover,
-div[class*="needfile"] button:hover {
+button:hover {
   background-color: #00225e !important;
 }
 
@@ -345,6 +332,11 @@ hr {
   margin: 1.5rem 0;
 }
 
+/* ---- Table cell alignment ---- */
+td {
+  vertical-align: middle !important;
+}
+
 /* ---- Section headers ---- */
 .section-header td,
 h2,
@@ -355,7 +347,7 @@ h3 {
   letter-spacing: 1px !important;
   color: #003087 !important;
   border-bottom: 1px solid #003087 !important;
-  padding: 5px 0 5px 2.5rem !important;
+  padding: 5px 0 5px 0 !important;
   margin: 2rem 0 1.25rem !important;
   background: transparent !important;
   font-family: 'Times New Roman', Times, serif !important;
@@ -425,12 +417,7 @@ h3 {
 #SaveAsDraftPopup .modal-body,
 #SaveAsDraftPopup .modal-body p,
 #SaveAsDraftPopup .modal-body span,
-#SaveAsDraftPopup .modal-body div {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  font-family: 'Times New Roman', Times, serif !important;
-}
-
+#SaveAsDraftPopup .modal-body div,
 p.renderPopUpSpan,
 #ALSaveAsDraftPopup {
   font-size: 13px !important;
@@ -489,7 +476,6 @@ p.renderPopUpSpan,
     background-color: #ffffff !important;
     padding: 0 !important;
   }
-
   form,
   .df-form-wrapper,
   .dynaform,
@@ -501,7 +487,6 @@ p.renderPopUpSpan,
     margin: 0 !important;
     background: transparent !important;
   }
-
   form::before,
   .df-form-wrapper::before,
   .dynaform::before,
@@ -510,36 +495,17 @@ p.renderPopUpSpan,
   }
 }
 
-/* ---- Responsive — tablet / mobile ---- */
+/* ---- Responsive ---- */
 @media (max-width: 640px) {
   body {
     padding: 1rem 0.5rem 2rem;
   }
-
-  form,
-  .df-form-wrapper,
-  .dynaform,
-  .form-container {
-    padding: 0;
-  }
-
-  .section-header td,
-  h2, h3 {
-    padding-left: 1.25rem !important;
-  }
-
-  .notice-strip,
-  .form-notice {
-    margin: 1rem 1.25rem;
-  }
-
   .form-footer,
   .submit-row {
     padding: 1.25rem;
     flex-direction: column-reverse;
     align-items: stretch;
   }
-
   input[type="button"],
   input[type="submit"],
   button {
@@ -568,16 +534,20 @@ p.renderPopUpSpan,
 
 /* ============================================
    TRANSFER CREDIT TABLE — .efsc-transfer-table
-   Option C: light gray headers, minimal lines
+   Light gray headers, minimal lines, full width
    ============================================ */
 
-/* Table wrapper */
 .efsc-transfer-table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed !important;
   border-collapse: collapse !important;
   font-family: 'Times New Roman', Times, serif !important;
   font-size: 13px !important;
-  margin-top: 0.75rem !important;
+  margin: 0.75rem 0 0 0 !important;
   border: none !important;
+  float: none !important;
+  display: table !important;
 }
 
 /* Column headers */
@@ -625,7 +595,7 @@ p.renderPopUpSpan,
   background-color: #fafafa !important;
 }
 
-/* Row hover — subtle highlight */
+/* Row hover */
 .efsc-transfer-table tbody tr:hover td {
   background-color: #f0f4ff !important;
 }
@@ -634,6 +604,7 @@ p.renderPopUpSpan,
 .efsc-transfer-table tbody tr td input[type="text"],
 .efsc-transfer-table tbody tr td input[type="number"],
 .efsc-transfer-table tbody tr td select {
+  width: 100% !important;
   height: 30px !important;
   padding: 0 8px !important;
   border: 1px solid #cccccc !important;
