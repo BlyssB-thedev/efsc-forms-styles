@@ -578,7 +578,6 @@ p.renderPopUpSpan,
 
 /* Table wrapper */
 .efsc-transfer-table {
-  width: 100% !important;
   border-collapse: collapse !important;
   font-family: 'Times New Roman', Times, serif !important;
   font-size: 13px !important;
@@ -640,7 +639,6 @@ p.renderPopUpSpan,
 .efsc-transfer-table tbody tr td input[type="text"],
 .efsc-transfer-table tbody tr td input[type="number"],
 .efsc-transfer-table tbody tr td select {
-  width: 100% !important;
   height: 30px !important;
   padding: 0 8px !important;
   border: 1px solid #cccccc !important;
