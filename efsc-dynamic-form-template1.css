@@ -345,11 +345,6 @@ hr {
   margin: 1.5rem 0;
 }
 
-/* ---- Table cell alignment ---- */
-td {
-  vertical-align: middle !important;
-}
-
 /* ---- Section headers ---- */
 .section-header td,
 h2,
